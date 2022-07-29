@@ -1,0 +1,6 @@
+{
+  "{src,test}/**/*.ts": [
+    "bash -c 'yarn run typecheck'",
+    "yarn run lint:fix"
+  ]
+}

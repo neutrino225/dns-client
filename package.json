@@ -1,0 +1,32 @@
+{
+  "name": "nodns",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "husky install",
+    "typecheck": "tsc --noEmit --pretty",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "lint": "eslint \"{src,test}/**/*.ts\"",
+    "lint:fix": "eslint \"{src,test}/**/*.ts\" --fix",
+    "build": "esbuild --bundle --outfile=dist/main.mjs --format=esm --platform=node src/main.ts",
+    "dev": "esbuild --bundle --outfile=dist/play.mjs --format=esm --platform=node src/playground.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.6.2",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "esbuild": "^0.14.50",
+    "esbuild-runner": "^2.2.1",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "ts-loader": "^9.3.1",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.0.0",
+    "typescript": "^4.7.4"
+  }
+}
